@@ -6,18 +6,18 @@ phases:
       python: 3.11
     commands:
       - echo Installing dependencies...
-      - mkdir -p python
-      - pip install -r requirements.txt -t python/
+      - cd app && mkdir -p python
+      - pip install -r app/requirements.txt -t app/python/
 
   build:
     commands:
       - echo Zipping the layer...
-      - zip -r layer.zip python/
+      - cd app && zip -r ../layer.zip python/
       - echo Uploading ZIP to S3...
       - aws s3 cp layer.zip s3://$S3_BUCKET_NAME/layers/layer-$CODEBUILD_BUILD_NUMBER.zip
       - aws s3 cp layer.zip s3://$S3_BUCKET_NAME/layers/layer-latest.zip
       - echo Publishing Lambda Layer...
-      - python publish_layer.py
+      - python app/publish_layer.py
 
   post_build:
     commands:
