@@ -7,7 +7,7 @@ variable "project_name" {
 }
 
 variable "s3_bucket_name" {
-  default = "lambda-layer-artifacts-yourname"  # change yourname to something unique
+  default = "lambda-layer-artifacts-ganii"  # change yourname to something unique
 }
 
 variable "layer_name" {
@@ -15,11 +15,11 @@ variable "layer_name" {
 }
 
 variable "github_owner" {
-  description = "Your GitHub username"
+  description = "Ganeshk006"
 }
 
 variable "github_repo" {
-  description = "Your GitHub repo name"
+  description = "lambda-layer-pipeline"
 }
 
 variable "github_branch" {
