@@ -1,0 +1,7 @@
+aws_region              = "us-east-1"
+github_owner            = "your-github-username"
+github_repo             = "lambda-layer-pipeline"
+github_branch           = "main"
+s3_bucket_name          = "lambda-layer-artifacts-yourname"
+layer_name              = "my-sample-layer"
+codestar_connection_arn = "arn:aws:codeconnections:us-east-1:603196661306:connection/32651e46-b549-4776-bea2-42751a13e5a4"
